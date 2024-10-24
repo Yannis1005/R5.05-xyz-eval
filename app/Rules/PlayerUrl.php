@@ -16,7 +16,7 @@ class PlayerUrl implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
         if (! app(Player::class)->validate($value)) {
-            $fail(trans('validation.unsupported_player'));
+            $fail(trans('validation.unsupported_player')) ;
         }
     }
 }
